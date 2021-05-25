@@ -191,3 +191,14 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
+
+
+const listenNewsBtn = document.querySelector("#listenNewsBtn");
+listenNewsBtn.addEventListener("click", function () {
+    $.ajax({
+        url: "/news.py",
+        success: function () {
+            console.log("done");
+        }
+    });
+});

@@ -107,11 +107,22 @@
 </div>
 </br>
 
-<!-- <div class="text-center" id="reader"><h4>No time to read the news? No worries click below to listen all the latest News Headlines!    </h4>
+<div class="text-center" id="reader"><h4>No time to read the news? No worries click below to listen all the latest News Headlines!    </h4>
 
-    <button type="button" class="btn btn-primary">Listen Now</button>
+    <button type="button" id="listenNewsBtn" class="btn btn-primary">Listen Now</button>
+    <script>
+        const listenNewsBtn = document.querySelector("#listenNewsBtn");
+listenNewsBtn.addEventListener("click", function () {
+    $.ajax({
+        url: "/news.py",
+        success: function () {
+           alert("done");
+        }
+    });
+});
+    </script>
 </br>
-</div> -->
+</div>
 <div class="site-section cta-big-image" id="about-section">
     <div class="container">
       <div class="row mb-5">
